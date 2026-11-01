@@ -16,7 +16,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 <link rel="manifest" href="manifest.webmanifest">
 <meta property="og:title" content="Voice GO · Paymove">
-<meta property="og:description" content="Kup bilet do ZOO głosem. Prototyp UI.">
+<meta property="og:description" content="Kup bilet głosem. Prototyp UI.">
 <meta property="og:image" content="assets/icons/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -351,6 +351,157 @@ img{display:block}
 @media (prefers-reduced-motion:reduce){
   *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+/* ===== v3 ===== */
+.cta .cnt{flex:none}
+.cta .sum{white-space:nowrap}
+.ticket .th .tm{font-family:var(--sans);letter-spacing:-.01em;color:#fff;font-size:inherit}
+.ticket .mk,.lightv .ticket .mk{background:#fff;color:var(--ink)}
+.chips{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--px),#000 calc(100% - var(--px)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 var(--px),#000 calc(100% - var(--px)),transparent 100%)}
+.topbar .c{justify-self:center;min-width:0}
+.merchant{display:flex;flex-direction:column;align-items:center;gap:3px;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:manipulation;cursor:default}
+.merchant .mr{display:flex;align-items:center;gap:8px}
+.mk{width:28px;height:28px;border-radius:8px;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
+.lightv .mk,.mk.inv{background:var(--ink);color:#fff}
+.merchant b{font-size:15px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.by{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;color:rgba(255,255,255,.6);white-space:nowrap}
+.by img{height:10px;width:auto}
+.lightv .by{color:var(--muted)}
+.merchant.lp .mk{transform:scale(.9);transition:transform .5s}
+.ai-b{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,.72)}
+.ai-b i{font-size:14px}
+.title-c{gap:8px;padding-top:2px}
+.chips{flex-wrap:nowrap;overflow-x:auto;justify-content:safe center;scrollbar-width:none;padding:12px var(--px) 10px;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none}
+.ctrl{padding-top:10px}
+.inputbar{display:none;flex:none;gap:8px;padding:12px var(--px) 4px;align-items:center}
+.typing .inputbar{display:flex}
+.typing .chips,.typing #wbox{display:none}
+.typing .chat{flex:1 1 0}
+.inputbar input{flex:1;min-width:0;height:48px;border-radius:24px;border:1px solid var(--line-d);background:rgba(255,255,255,.07);color:#fff;font:inherit;font-size:16px;padding:0 18px;outline:none}
+.inputbar input:focus{border-color:rgba(255,255,255,.5)}
+.inputbar input::placeholder{color:rgba(255,255,255,.5)}
+.inputbar .snd{width:48px;height:48px;border-radius:50%;background:#fff;color:var(--ink);font-size:20px;display:flex;align-items:center;justify-content:center;flex:none}
+.side-b.on span.c{background:#fff;color:var(--ink)}
+.nomic-c{display:none;flex:0 1 auto;margin:8px var(--px);padding:18px;border-radius:20px;border:1px solid var(--line-d);background:rgba(255,255,255,.05);text-align:center;flex-direction:column;align-items:center;gap:8px}
+.nomic .nomic-c{display:flex}
+.nomic #wbox,.nomic .chips,.nomic .hint{display:none}
+.nomic.typing .nomic-c{display:none}
+.nomic-c .ic{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:24px}
+.nomic-c b{font-size:16px;font-weight:600}
+.nomic-c p{font-size:13.5px;color:rgba(255,255,255,.7);line-height:1.45}
+.btn-w{height:48px;padding:0 20px;border-radius:14px;background:#fff;color:var(--ink);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;margin-top:6px}
+.nomic .mic{opacity:.4}
+.datechip{grid-column:1/-1;grid-row:2;justify-self:start;margin-top:8px;height:34px;padding:0 10px 0 10px;border-radius:999px;border:1px solid var(--line);background:var(--frost);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px;position:relative}
+.datechip:before{content:"";position:absolute;inset:-5px 0}
+.datechip i{font-size:15px}
+.sumrows{margin:14px var(--px) 0;padding-top:12px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--muted)}
+.sumrows div{display:flex;justify-content:space-between}
+.sumrows .m{font-family:var(--mono);color:var(--ink)}
+.sumrows .big{color:var(--ink);font-weight:600;font-size:15px}
+.sumrows .big .m{font-weight:500}
+.cta .lbl{white-space:nowrap}
+.order{margin:0 var(--px);padding:12px 14px;border-radius:16px;background:var(--frost);display:flex;align-items:center;gap:10px}
+.order .tx{flex:1;min-width:0;font-size:14px;font-weight:600}
+.order .tx span{display:block;font-size:12.5px;font-weight:400;color:var(--muted);margin-top:2px}
+.order .chg{height:36px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:13px;font-weight:500;position:relative}
+.order .chg:before{content:"";position:absolute;inset:-4px}
+.bd{font-size:12.5px;color:var(--muted);grid-column:1/-1;grid-row:2;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.paytot{font-family:var(--mono);font-size:22px;font-weight:500;grid-column:2;grid-row:1}
+.pm{margin-top:12px}
+.pm .lab{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:500;padding:2px 2px 0}
+.opt:focus-visible{outline:2px solid #7FA3FF;outline-offset:2px}
+.opt .lg i{font-size:22px}
+.codeact .alt{flex:none;border:0;background:none;color:var(--muted);height:44px;padding:0 6px;font-size:13px}
+.codeact .pri{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dwarn{display:none;margin-top:8px;padding:10px 12px;border-radius:12px;background:#FFF6E5;color:#7A4B00;font-size:12.5px;line-height:1.4;gap:8px;align-items:flex-start}
+.dwarn i{font-size:16px;margin-top:1px}
+.dwarn.show{display:flex}
+.dwarn button{margin-left:auto;font-weight:600;color:#7A4B00;text-decoration:underline;flex:none;padding:0 2px;height:20px}
+.email{margin:12px var(--px) 0}
+.email label{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500}
+.email label span{color:var(--muted);font-weight:400}
+.email input{margin-top:8px;width:100%;height:48px;border-radius:14px;border:1px solid var(--line);background:var(--frost);font:inherit;font-size:16px;padding:0 14px;outline:none;color:var(--ink)}
+.email input:focus{border-color:var(--ink);background:#fff}
+.email input.bad{border-color:var(--err);background:var(--err-bg)}
+.legal{margin:12px var(--px) 4px;font-size:12px;color:var(--muted);line-height:1.5}
+.legal a{color:var(--ink);text-decoration:underline;cursor:pointer}
+.sheet.kp .order,.sheet.kp .email,.sheet.kp .legal,.sheet.kp .pm .lab{display:none}
+.sheet.kp .pm{margin-top:0}
+.view.kpon .upper .chat{display:none}
+.view.kpon .upper{flex:0 0 auto;min-height:0;padding-bottom:10px}
+.ptimer{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:13px;color:rgba(255,255,255,.75);padding:6px 12px;border-radius:999px;border:1px solid var(--line-d)}
+.ptimer.low{color:#FFB4A8;border-color:rgba(255,120,100,.4)}
+.ptimer i{font-size:15px}
+.linkc{height:44px;padding:0 16px;font-size:14px;color:rgba(255,255,255,.8);text-decoration:underline;text-underline-offset:3px}
+.proc .loader{width:104px;height:104px}
+.proc{gap:16px}
+.errv{padding:0}
+.err-body{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px var(--px) 12px;gap:10px;justify-content:center}
+.err-ic{width:68px;height:68px;border-radius:50%;background:rgba(255,107,91,.14);color:#FF8A7A;display:flex;align-items:center;justify-content:center;font-size:34px;flex:none}
+.active .err-ic{animation:okpop .5s var(--spring) both}
+.err-body h2{font-size:24px;font-weight:600;letter-spacing:-.02em;margin-top:6px}
+.err-body p.r{font-size:14.5px;color:rgba(255,255,255,.72);line-height:1.5;max-width:320px}
+.safe{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--live);margin-top:2px}
+.safe i{font-size:16px}
+.err-body .chat{flex:none;width:100%;-webkit-mask-image:none;mask-image:none;padding:8px 0 0;min-height:0;text-align:left}
+.err-body .miniwave{padding:0}
+.recap{font-size:13px;color:rgba(255,255,255,.6);font-family:var(--mono)}
+.errbtns{flex:none;display:flex;flex-direction:column;gap:8px;padding:10px var(--px) calc(var(--sab) + 4px)}
+.errbtns button{height:54px;border-radius:16px;font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line-d);background:rgba(255,255,255,.06)}
+.errbtns button.pri{background:#fff;color:var(--ink);border-color:#fff}
+.errbtns i{font-size:19px}
+.ticket .th{gap:10px}
+.ticket .tm{display:flex;align-items:center;gap:8px}
+.ticket .tm b{font-size:15px;font-weight:600}
+.ticket .tm .mk{width:30px;height:30px}
+.ticket .tby{display:flex;align-items:center;gap:4px;font-size:10.5px;color:rgba(255,255,255,.55);margin-top:14px}
+.ticket .tby img{height:10px}
+.ticket h3{margin-top:14px}
+.ticket .note2{margin-top:12px;display:flex;gap:8px;align-items:flex-start;font-size:12.5px;line-height:1.4;color:rgba(255,255,255,.8);padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.07)}
+.ticket .note2 i{font-size:16px}
+.ticket .grid{grid-template-columns:1.25fr 1.15fr .6fr}
+.ids{width:100%;margin-top:12px;border-radius:16px;background:#fff;border:1px solid var(--line);padding:4px 14px}
+.ids div{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;font-size:13px;color:var(--muted)}
+.ids div+div{border-top:1px solid var(--line)}
+.ids .mono{color:var(--ink);font-size:13px}
+.confbtns{flex-direction:column;gap:8px}
+.confbtns button{flex:none;width:100%}
+.confbtns button.done{background:var(--ok-bg);color:var(--ok);border-color:var(--ok-bg)}
+.dlg{position:absolute;inset:0;z-index:90;display:flex;align-items:flex-end;background:rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s .25s}
+.dlg.show{opacity:1;visibility:visible;transition:opacity .25s}
+.dlg .box{width:100%;background:#fff;color:var(--ink);border-radius:28px 28px 0 0;padding:8px var(--px) calc(var(--sab) + 8px);transform:translateY(30px);transition:transform .35s var(--ease)}
+.dlg.show .box{transform:none}
+.dlg h4{font-size:20px;font-weight:600;letter-spacing:-.01em;margin-top:12px}
+.dlg p{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.45}
+.dlg .bt{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.dlg .bt button{height:52px;border-radius:16px;font-weight:600;font-size:15px;border:1px solid var(--line);background:#fff;display:flex;align-items:center;gap:10px;padding:0 16px;justify-content:center}
+.dlg .bt button.pri{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dlg .bt button.rd{color:var(--err)}
+.dlg .bt.list button{justify-content:flex-start;font-weight:500}
+.dlg .bt.list button i{font-size:19px}
+.dlg .bt.list button.on{border-color:var(--ink);box-shadow:inset 0 0 0 .5px var(--ink)}
+.dlg .tag{font-size:11px;font-family:var(--mono);color:var(--muted);letter-spacing:.08em}
+.simlink{align-self:flex-start;font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;height:32px}
+.simlist{display:none;flex-direction:column;gap:4px;margin-top:-16px}
+.simlist.show{display:flex}
+.simlist button{text-align:left;font-size:13px;padding:7px 10px;border-radius:10px;border:1px solid var(--line);background:#fff}
+.simlist button:hover{border-color:var(--ink)}
+@media (max-height:700px) and (max-width:520px){
+  .upper{flex:1 0 auto;min-height:0}
+  .upper .chat{flex:none;min-height:0}
+  .upper .chat .bub{max-width:94%}
+  .keypad button{height:44px}
+  .keypad{gap:6px;padding-top:6px}
+  .view.kpon .sh-head{padding-top:6px;padding-bottom:8px}
+  .view.kpon .miniwave{padding-top:2px}
+  .err-ic{width:56px;height:56px;font-size:28px}
+  .err-body h2{font-size:21px}
+  .errbtns button{height:50px}
+  .chips{padding-top:6px;padding-bottom:8px}
+  .merchant b{font-size:14px}
+}
+@media (max-width:380px){.ticket .grid b{font-size:14px}}
 </style>
 </head>
 <body>
@@ -358,11 +509,19 @@ img{display:block}
   <img class="brand" src="assets/logo-black.svg" alt="Paymove">
   <div>
     <h1>Voice GO<br>klikalny prototyp</h1>
-    <p style="margin-top:12px">Asystent głosowy w kasie biletowej ZOO po zeskanowaniu kodu QR. Głos i płatności są symulowane, nic nie jest naprawdę wysyłane.</p>
+    <p style="margin-top:12px">Asystentka głosowa w kasie biletowej (przykładowy obiekt: Miejskie ZOO) po zeskanowaniu kodu QR. Głos i płatności są symulowane, nic nie jest naprawdę wysyłane.</p>
   </div>
   <ol class="steps" id="steps"></ol>
+  <button class="simlink" data-act="simtoggle"><i class="ri-flask-line"></i> Symuluj błąd lub stan</button>
+  <div class="simlist" id="simlist">
+    <button data-act="sim" data-s="code">Kod BLIK błędny lub wygasły</button>
+    <button data-act="sim" data-s="declined">Płatność odrzucona w banku</button>
+    <button data-act="sim" data-s="timeout">Brak potwierdzenia na czas</button>
+    <button data-act="sim" data-s="cancel">Anulowanie przez klienta</button>
+    <button data-act="sim" data-s="nomic">Brak dostępu do mikrofonu</button>
+  </div>
   <button class="restart press" data-act="restart"><i class="ri-restart-line"></i>Zacznij od nowa</button>
-  <span class="note">Ceny przykładowe · prototyp UI · v2, 1.11.2026</span>
+  <span class="note">Ceny przykładowe · prototyp UI · v3, 1.11.2026</span>
 </aside>
 
 <div class="phone">
@@ -372,85 +531,76 @@ img{display:block}
   <section class="view scan active" data-view="scan" id="v-scan">
     <div class="cam"></div>
     <div class="topbar"><div class="l"><img class="logo" src="assets/logo-white.svg" alt="Paymove"></div><div></div><div class="r"><button class="ib press" data-act="torch" aria-label="Latarka"><i class="ri-flashlight-line"></i></button></div></div>
-    <div class="scan-head"><h2>Zeskanuj kod QR</h2><p>Skieruj aparat na tablicę przy kasie ZOO</p></div>
+    <div class="scan-head"><h2>Zeskanuj kod QR</h2><p>Skieruj aparat na tablicę przy kasie</p></div>
     <div class="stage" id="stage"><div class="target" id="target">
-      <div class="board"><div class="t">Kup bilet głosem</div><img class="q" src="assets/qr-scan.svg" alt=""><div class="b"><img src="assets/blik.svg" alt="BLIK"><img src="assets/applePay.svg" alt="Apple Pay"><img src="assets/gPay.svg" alt="Google Pay"></div></div>
+      <div class="board"><div class="t">Miejskie ZOO · kup bilet głosem</div><img class="q" src="assets/qr-scan.svg" alt=""><div class="b"><img src="assets/blik.svg" alt="BLIK"><img src="assets/applePay.svg" alt="Apple Pay"><img src="assets/gPay.svg" alt="Google Pay"></div></div>
       <div class="finder"><i></i><i></i><i></i><i></i><div class="scanline"></div></div>
     </div></div>
     <div class="scan-foot">
-      <button class="found press" id="found" data-act="go" data-to="greet"><span class="ico"><img src="assets/sygnet.svg" alt=""></span><span><b>ZOO — kasa biletowa</b><span class="s">go.paymove.io · zakup głosowy</span></span><i class="ri-arrow-right-line go"></i></button>
+      <button class="found press" id="found" data-act="go" data-to="greet"><span class="ico"><span class="mk inv"><i class="ri-bear-smile-fill"></i></span></span><span><b>Miejskie ZOO</b><span class="s">Kasa biletowa · go.paymove.io</span></span><i class="ri-arrow-right-line go"></i></button>
       <button class="shutter" data-act="scan" aria-label="Skanuj kod"><span><i class="ri-qr-scan-2-line"></i></span></button>
       <small id="scanHint">Dotknij, aby zeskanować</small>
     </div>
   </section>
 
   <section class="view dark" data-view="greet" id="v-greet">
-    <div class="topbar"><div class="l"><img class="logo" src="assets/logo-white.svg" alt="Paymove"></div><div></div><div class="r"><span class="badge-el"><span class="ii"><b></b><b></b></span>ElevenLabs</span><button class="ib press" data-act="restart" aria-label="Zakończ i zacznij od nowa"><i class="ri-close-line"></i></button></div></div>
-    <div class="title-c"><h3>ZOO — kasa biletowa</h3><span class="vstate" data-m="speak"><span class="dot"></span><i class="ri-volume-up-line"></i><span class="lb">Asystent mówi</span></span></div>
+    <div class="topbar"><div class="l"></div><div class="c"><div class="merchant" title="Miejskie ZOO"><span class="mr"><span class="mk"><i class="ri-bear-smile-fill"></i></span><b>Miejskie ZOO</b></span><span class="by">obsługiwane przez <img src="assets/logo-white.svg" alt="Paymove"></span></div></div><div class="r"><button class="ib press" data-act="quit" aria-label="Przerwij zakup"><i class="ri-close-line"></i></button></div></div>
+    <div class="title-c"><span class="ai-b"><i class="ri-sparkling-2-line"></i>Asystentka AI · głos syntetyczny</span><span class="vstate" data-m="speak"><span class="dot"></span><i class="ri-volume-up-line"></i><span class="lb">Asystentka mówi</span></span></div>
     <div class="chat" id="greetChat" aria-live="polite"></div>
     <div class="wavebox" id="wbox"><div class="wave" id="bigwave"></div></div>
+    <div class="nomic-c" id="nomicCard"><span class="ic"><i class="ri-mic-off-line"></i></span><b>Brak dostępu do mikrofonu</b><p>Możesz napisać, czego potrzebujesz, albo wybrać bilety ręcznie.</p><button class="btn-w press" data-act="go" data-to="tickets"><i class="ri-coupon-3-line"></i>Wybierz bilety ręcznie</button></div>
     <div class="hint" id="hint">&nbsp;</div>
     <div class="chips off" id="chips">
       <button class="chip press" data-act="say" data-say="Poproszę dwa normalne i jeden ulgowy." data-add="n:2,u:1">2 normalne + 1 ulgowy</button>
       <button class="chip press" data-act="say" data-say="Poproszę dwa normalne." data-add="n:2">2 normalne</button>
       <button class="chip press" data-act="say" data-say="Poproszę rodzinny dwa plus dwa." data-add="f:1">Rodzinny 2+2</button>
     </div>
+    <form class="inputbar" id="inputbar" autocomplete="off"><input id="tin" type="text" enterkeyhint="send" placeholder="Np. 2 normalne i 1 ulgowy" aria-label="Napisz do asystentki"><button class="snd press" type="submit" aria-label="Wyślij"><i class="ri-send-plane-2-fill"></i></button></form>
     <div class="ctrl">
-      <button class="side-b" data-act="toast" data-msg="Pisanie jest wyłączone w prototypie — wybierz podpowiedź"><span class="c"><i class="ri-keyboard-box-line"></i></span>Wpisz</button>
+      <button class="side-b" id="typeBtn" data-act="type"><span class="c"><i class="ri-keyboard-box-line"></i></span>Wpisz</button>
       <button class="mic" id="micBig" data-act="say" data-say="Poproszę dwa normalne i jeden ulgowy." data-add="n:2,u:1" aria-label="Mów"><i class="ri-mic-fill"></i></button>
-      <button class="side-b" data-act="go" data-to="tickets"><span class="c"><i class="ri-coupon-3-line"></i></span>Bilety</button>
+      <button class="side-b" data-act="go" data-to="tickets"><span class="c"><i class="ri-coupon-3-line"></i></span>Wybierz ręcznie</button>
     </div>
   </section>
 
   <section class="view dark" data-view="tickets" id="v-tickets">
-    <div class="topbar"><div class="l"><button class="back press" data-act="go" data-to="greet"><i class="ri-arrow-left-s-line"></i>Rozmowa</button></div><img class="logo" src="assets/logo-white.svg" alt="Paymove"><div class="r"><button class="ib press" data-act="restart" aria-label="Zacznij od nowa"><i class="ri-restart-line"></i></button></div></div>
+    <div class="topbar"><div class="l"><button class="ib press" data-act="go" data-to="greet" aria-label="Wróć do rozmowy"><i class="ri-arrow-left-s-line"></i></button></div><div class="c"><div class="merchant" title="Miejskie ZOO"><span class="mr"><span class="mk"><i class="ri-bear-smile-fill"></i></span><b>Miejskie ZOO</b></span><span class="by">obsługiwane przez <img src="assets/logo-white.svg" alt="Paymove"></span></div></div><div class="r"><button class="ib press" data-act="quit" aria-label="Przerwij zakup"><i class="ri-close-line"></i></button></div></div>
     <div class="upper"><div class="chat mini" id="tkChat" aria-live="polite"></div><div class="miniwave"><div class="wave" id="w2"></div><span class="vstate" data-m="listen"><span class="dot"></span><i></i><span class="lb">Słucham</span></span></div></div>
     <div class="sheet">
       <div class="grab"></div>
-      <div class="sh-head"><div><h4>Bilety wstępu</h4><p><i class="ri-calendar-line"></i>Sobota, 7 listopada · 9:00–17:00</p></div><span class="pill">Ceny przykładowe</span></div>
-      <div class="sh-body"><div class="tickets" id="tkList"></div></div>
+      <div class="sh-head"><h4>Bilety wstępu</h4><span class="pill">Ceny przykładowe</span><button class="datechip press" data-act="date"><i class="ri-calendar-line"></i><span class="dlab">Dziś, sob. 7.11.2026</span><i class="ri-arrow-down-s-line"></i></button></div>
+      <div class="sh-body"><div class="tickets" id="tkList" role="list"></div>
+        <div class="sumrows"><div><span>Bilety</span><span class="m" id="sub">0,00 zł</span></div><div><span>Opłata serwisowa</span><span class="m" id="feeV">0,00 zł</span></div><div class="big"><span>Razem</span><span class="m" id="total">0,00 zł</span></div></div>
+      </div>
       <div class="sh-foot">
-        <button class="round press" id="micSmall" data-act="speak2" aria-label="Dodaj głosem"><i class="ri-mic-line"></i></button>
-        <button class="cta press" id="toCart" data-act="go" data-to="summary"><span class="cnt" id="cnt">0</span>Koszyk<span class="sum" id="cartSum">0,00 zł</span><i class="ri-arrow-right-line"></i></button>
+        <button class="round press" id="micSmall" data-act="speak2" aria-label="Powiedz asystentce"><i class="ri-mic-line"></i></button>
+        <button class="cta press" id="toPay" data-act="go" data-to="pay"><span class="cnt" id="cnt">0</span><span class="lbl" id="toPayL">Do zapłaty</span><span class="sum" id="cartSum">0,00 zł</span><i class="ri-arrow-right-line"></i></button>
       </div>
-    </div>
-  </section>
-
-  <section class="view dark" data-view="summary" id="v-summary">
-    <div class="topbar"><div class="l"><button class="back press" data-act="go" data-to="tickets"><i class="ri-arrow-left-s-line"></i>Bilety</button></div><img class="logo" src="assets/logo-white.svg" alt="Paymove"><div class="r"><button class="ib press" data-act="restart" aria-label="Zacznij od nowa"><i class="ri-restart-line"></i></button></div></div>
-    <div class="upper"><div class="chat mini" id="sumChat" aria-live="polite"></div><div class="miniwave"><div class="wave" id="w4"></div><span class="vstate" data-m="listen"><span class="dot"></span><i></i><span class="lb">Słucham</span></span></div></div>
-    <div class="sheet">
-      <div class="grab"></div>
-      <div class="sh-head"><div><h4>Podsumowanie</h4><p><i class="ri-calendar-line"></i>Sobota, 7.11.2026 · wstęp dzienny</p></div><span class="pill">Ceny przykładowe</span></div>
-      <div class="sh-body">
-        <div class="lines" id="lines"></div>
-        <div class="empty" id="empty">Koszyk jest pusty. Wróć i dodaj bilety.</div>
-        <div class="tot">
-          <div><span>Bilety</span><span class="m" id="sub">0,00 zł</span></div>
-          <div><span>Opłata serwisowa</span><span class="m" id="feeV">1,00 zł</span></div>
-          <div class="big"><span>Razem</span><span class="m" id="total">0,00 zł</span></div>
-        </div>
-        <div class="meta"><i class="ri-mail-send-line"></i>Bilety trafią do telefonu i na e-mail.</div>
-      </div>
-      <div class="sh-foot"><button class="round press" id="micSum" data-act="speak3" aria-label="Powiedz: płacę"><i class="ri-mic-line"></i></button><button class="cta center press" id="toPay" data-act="go" data-to="pay"><i class="ri-secure-payment-line"></i>Przejdź do płatności</button></div>
     </div>
   </section>
 
   <section class="view dark pay" data-view="pay" id="v-pay">
-    <div class="topbar"><div class="l"><button class="back press" data-act="go" data-to="summary"><i class="ri-arrow-left-s-line"></i>Koszyk</button></div><img class="logo" src="assets/logo-white.svg" alt="Paymove"><div class="r"><button class="ib press" data-act="restart" aria-label="Zacznij od nowa"><i class="ri-restart-line"></i></button></div></div>
+    <div class="topbar"><div class="l"><button class="ib press" data-act="go" data-to="tickets" aria-label="Wróć do biletów"><i class="ri-arrow-left-s-line"></i></button></div><div class="c"><div class="merchant" title="Miejskie ZOO"><span class="mr"><span class="mk"><i class="ri-bear-smile-fill"></i></span><b>Miejskie ZOO</b></span><span class="by">obsługiwane przez <img src="assets/logo-white.svg" alt="Paymove"></span></div></div><div class="r"><button class="ib press" data-act="quit" aria-label="Przerwij zakup"><i class="ri-close-line"></i></button></div></div>
     <div class="upper"><div class="chat mini" id="payChat" aria-live="polite"></div><div class="miniwave"><div class="wave" id="w3"></div><span class="vstate" data-m="listen"><span class="dot"></span><i></i><span class="lb">Słucham</span></span></div></div>
     <div class="sheet hasSecure" id="paySheet">
       <div class="grab"></div>
-      <div class="sh-head" style="align-items:center"><h4>Płatność</h4><span class="mono" style="font-size:20px;font-weight:500" id="payTotal">0,00 zł</span></div>
-      <div class="sh-body"><div class="pm">
-        <div class="opt sel" data-m="blik" data-act="method" role="radio" aria-checked="true">
-          <div class="r"><span class="lg"><img src="assets/blik.svg" alt="BLIK"></span><span class="tx"><b>BLIK</b><span id="blikSub">Podyktuj lub wpisz 6 cyfr</span></span><span class="radio"></span></div>
-          <div class="code" id="code"></div>
-          <div class="codeact"><button class="press" id="dictBtn" data-act="dictate"><i class="ri-mic-line"></i>Podyktuj kod</button><button class="press" id="kpBtn" data-act="keypad"><i class="ri-keyboard-line"></i>Wpisz</button></div>
+      <div class="sh-head"><h4>Do zapłaty</h4><span class="paytot" id="payTotal">0,00 zł</span><span class="bd" id="payBd">Bilety 0,00 zł · Opłata serwisowa 0,00 zł</span></div>
+      <div class="sh-body">
+        <div class="order"><span class="tx" id="ordWhat">–<span class="dlab">Dziś, sob. 7.11.2026</span></span><button class="chg press" data-act="go" data-to="tickets">Zmień</button></div>
+        <div class="pm" role="radiogroup" aria-label="Metoda płatności" id="pm">
+          <span class="lab">Metoda płatności</span>
+          <div class="opt" data-m="wallet" data-act="method" role="radio" tabindex="0" aria-checked="false"><div class="r"><span class="lg"><img id="wLogo" src="assets/applePay.svg" alt="Apple Pay"></span><span class="tx"><b id="wName">Apple Pay</b><span>Szybka płatność w telefonie</span></span><span class="radio"></span></div></div>
+          <div class="opt" data-m="blik" data-act="method" role="radio" tabindex="-1" aria-checked="false">
+            <div class="r"><span class="lg"><img src="assets/blik.svg" alt="BLIK"></span><span class="tx"><b>BLIK</b><span id="blikSub">Wpisz 6 cyfr z aplikacji banku</span></span><span class="radio"></span></div>
+            <div class="code" id="code" data-act="keypad"></div>
+            <div class="codeact"><button class="press pri" id="kpBtn" data-act="keypad"><i class="ri-keyboard-line"></i>Wpisz kod</button><button class="alt press" id="dictBtn" data-act="dictask"><i class="ri-mic-line"></i> Podyktuj</button></div>
+            <div class="dwarn" id="dwarn"><i class="ri-error-warning-line"></i><span>Osoby obok mogą usłyszeć kod. Bezpieczniej wpisać go na klawiaturze.</span><button data-act="dictate">Dyktuję</button></div>
+          </div>
+          <div class="opt" data-m="card" data-act="method" role="radio" tabindex="-1" aria-checked="false"><div class="r"><span class="lg"><i class="ri-bank-card-line"></i></span><span class="tx"><b>Karta</b><span>Visa, Mastercard · 3-D Secure</span></span><span class="radio"></span></div></div>
         </div>
-        <div class="opt" data-m="apple" data-act="method" role="radio" aria-checked="false"><div class="r"><span class="lg"><img src="assets/applePay.svg" alt="Apple Pay"></span><span class="tx"><b>Apple Pay</b><span>Potwierdź Face ID</span></span><span class="radio"></span></div></div>
-        <div class="opt" data-m="google" data-act="method" role="radio" aria-checked="false"><div class="r"><span class="lg"><img src="assets/gPay.svg" alt="Google Pay"></span><span class="tx"><b>Google Pay</b><span>Potwierdź w telefonie</span></span><span class="radio"></span></div></div>
-      </div></div>
+        <div class="email"><label for="email"><i class="ri-mail-line"></i>Wyślij bilet na e-mail <span>(opcjonalnie)</span></label><input id="email" type="email" inputmode="email" autocomplete="email" placeholder="adres@przyklad.pl"></div>
+        <p class="legal">Sprzedawca: Miejskie ZOO · Płacąc, akceptujesz <a data-act="toast" data-msg="Regulamin Pay&amp;Go (prototyp, bez treści)">Regulamin Pay&amp;Go</a>.</p>
+      </div>
       <div class="sh-foot"><button class="cta center press" id="payBtn" data-act="pay"><span class="spin"></span><i class="ri-lock-2-line"></i><span id="payLbl">Zapłać</span></button></div>
       <div class="secure"><i class="ri-shield-check-line"></i>Bezpieczna płatność przez Paymove</div>
       <div class="keypad" id="keypad"></div>
@@ -461,73 +611,107 @@ img{display:block}
     <div class="loader"><svg viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="58"/><circle class="fg" id="ring" cx="60" cy="60" r="58"/></svg><img src="assets/sygnet-white.svg" alt="Paymove"></div>
     <div class="amt" id="procAmt">0,00 zł</div>
     <div class="via" id="procVia"></div>
-    <h3 id="procTitle">Potwierdź w aplikacji banku</h3>
-    <p id="procText">Wysłaliśmy żądanie BLIK. Zatwierdź płatność w aplikacji bankowej.</p>
-    <div class="prog" id="prog">
-      <div><i class="ri-checkbox-blank-circle-line"></i>Autoryzacja płatności</div>
-      <div><i class="ri-checkbox-blank-circle-line"></i>Potwierdzenie z banku</div>
-      <div><i class="ri-checkbox-blank-circle-line"></i>Wystawienie biletów</div>
+    <h3 id="procTitle">Sprawdzam kod BLIK</h3>
+    <p id="procText"></p>
+    <div class="prog" id="prog"><div></div><div></div><div></div></div>
+    <span class="ptimer" id="ptimer"><i class="ri-time-line"></i><span>Czas na potwierdzenie <b id="ptime">2:00</b></span></span>
+    <button class="linkc" data-act="cancelpay">Anuluj płatność</button>
+  </section>
+
+  <section class="view dark errv" data-view="error" id="v-error">
+    <div class="topbar"><div class="l"></div><div class="c"><div class="merchant" title="Miejskie ZOO"><span class="mr"><span class="mk"><i class="ri-bear-smile-fill"></i></span><b>Miejskie ZOO</b></span><span class="by">obsługiwane przez <img src="assets/logo-white.svg" alt="Paymove"></span></div></div><div class="r"><button class="ib press" data-act="quit" aria-label="Przerwij zakup"><i class="ri-close-line"></i></button></div></div>
+    <div class="err-body">
+      <span class="err-ic"><i id="errIc" class="ri-error-warning-line"></i></span>
+      <h2 id="errT">Płatność nieudana</h2>
+      <p class="r" id="errR"></p>
+      <span class="safe"><i class="ri-shield-check-line"></i>Nie pobraliśmy pieniędzy</span>
+      <span class="recap" id="errRecap"></span>
+      <div class="chat mini" id="errChat" aria-live="polite"></div>
+      <div class="miniwave"><div class="wave" id="w6"></div><span class="vstate" data-m="listen"><span class="dot"></span><i></i><span class="lb">Słucham</span></span></div>
     </div>
+    <div class="errbtns"><button class="pri press" data-act="retry"><i class="ri-refresh-line"></i>Spróbuj ponownie</button><button class="press" id="errAlt" data-act="altpay"><i class="ri-swap-line"></i><span>Zmień metodę płatności</span></button></div>
   </section>
 
   <section class="view lightv" data-view="done" id="v-done">
-    <div class="topbar"><div class="l"><img class="logo" src="assets/logo-black.svg" alt="Paymove"></div><div></div><div class="r"><button class="ib press" data-act="restart" aria-label="Zacznij od nowa"><i class="ri-restart-line"></i></button></div></div>
+    <div class="topbar"><div class="l"></div><div class="c"><div class="merchant" title="Miejskie ZOO"><span class="mr"><span class="mk"><i class="ri-bear-smile-fill"></i></span><b>Miejskie ZOO</b></span><span class="by">obsługiwane przez <img src="assets/logo-black.svg" alt="Paymove"></span></div></div><div class="r"><button class="ib press" data-act="restart" aria-label="Zamknij"><i class="ri-close-line"></i></button></div></div>
     <div class="conf-body">
       <span class="okc"><i class="ri-check-line"></i></span>
       <h2>Płatność potwierdzona</h2>
-      <p class="sub">Bilety są w telefonie. Wysłaliśmy je też na e-mail.</p>
+      <p class="sub" id="doneSub">Bilet jest w telefonie.</p>
       <div class="ticket">
-        <div class="th"><img src="assets/logo-white.svg" alt="Paymove"><span>BILET WSTĘPU</span></div>
-        <h3>ZOO — wstęp dzienny</h3>
+        <div class="th"><span class="tm"><span class="mk"><i class="ri-bear-smile-fill"></i></span><b>Miejskie ZOO</b></span><span>BILET WSTĘPU</span></div>
+        <h3>Wstęp dzienny</h3>
         <div class="what" id="tWhat"></div>
-        <div class="grid"><div><small>Data</small><b>sob. 7.11.2026</b></div><div><small>Wejście</small><b>9:00–17:00</b></div><div><small>Osoby</small><b id="tPeople">0</b></div></div>
+        <div class="grid"><div><small>Data</small><b id="tDate">sob., 7.11.2026</b></div><div><small>Godziny otwarcia</small><b>9:00–17:00</b></div><div><small>Osoby</small><b id="tPeople">0</b></div></div>
+        <div class="note2" id="tNote"><i class="ri-id-card-line"></i><span>Bilet ulgowy: okaż legitymację lub dokument przy wejściu.</span></div>
         <div class="perf"></div>
         <div class="bot"><div class="qr"><img src="assets/qr-ticket.svg" alt="Kod QR biletu"></div>
-          <div><small>Nr biletu</small><span class="mono">ZOO-0711-0421</span><small>Zapłacono</small><span class="mono" id="tPaid"></span><small>Pokaż kod przy bramce</small></div></div>
+          <div><small>Nr biletu</small><span class="mono">MZ-0711-0421</span><small>Zapłacono</small><span class="mono" id="tPaid"></span><small>Pokaż kod przy bramce</small></div></div>
+        <div class="tby">obsługiwane przez <img src="assets/logo-white.svg" alt="Paymove"></div>
       </div>
-      <button class="say press" data-act="replay"><span class="i"><i class="ri-volume-up-line"></i></span><span>„Gotowe! Miłego dnia w ZOO.”</span><span class="wave" id="w5"></span></button>
+      <div class="ids"><div><span>Nr biletu</span><span class="mono">MZ-0711-0421</span></div><div><span>ID transakcji</span><span class="mono">PMV-7F3K-92QX-0711</span></div><div><span>Metoda płatności</span><span class="mono" id="tMeth">BLIK</span></div><div><span>Opłata serwisowa</span><span class="mono" id="tFee">1,00 zł</span></div></div>
+      <button class="say press" data-act="replay"><span class="i"><i class="ri-volume-up-line"></i></span><span>„Gotowe! Miłego dnia w Miejskim ZOO.”</span><span class="wave" id="w5"></span></button>
     </div>
-    <div class="confbtns"><button class="press" data-act="wallet"><i class="ri-wallet-3-line"></i>Dodaj do Wallet</button><button class="pri press" data-act="restart"><i class="ri-restart-line"></i>Od nowa</button></div>
+    <div class="confbtns"><button class="pri press" id="walletBtn" data-act="wallet"><i class="ri-wallet-3-line"></i><span id="walletL">Dodaj do Apple Wallet</span></button><button class="press" data-act="restart"><i class="ri-check-line"></i>Gotowe</button></div>
   </section>
+
+  <div class="dlg" id="dlgQuit" data-act="dlgclose"><div class="box" role="dialog" aria-modal="true" aria-labelledby="qT"><div class="grab"></div><h4 id="qT">Przerwać zakup?</h4><p>Wybrane bilety zostaną usunięte. Nic nie zostało pobrane.</p><div class="bt"><button class="pri press" data-act="dlgclose">Kontynuuj zakup</button><button class="rd press" data-act="restart">Przerwij zakup</button></div></div></div>
+  <div class="dlg" id="dlgDate" data-act="dlgclose"><div class="box" role="dialog" aria-modal="true" aria-labelledby="dT"><div class="grab"></div><h4 id="dT">Data wizyty</h4><p>Prototyp: wybór daty do potwierdzenia w GO. Ceny bez zmian.</p><div class="bt list" id="dateList"></div></div></div>
+  <div class="dlg" id="dlgSim" data-act="dlgclose"><div class="box" role="dialog" aria-modal="true" aria-labelledby="sT"><div class="grab"></div><span class="tag">TRYB DEMO</span><h4 id="sT">Symuluj stan</h4><p>Ukryte menu prototypu (przytrzymaj logo obiektu).</p><div class="bt list">
+    <button class="press" data-act="sim" data-s="code"><i class="ri-error-warning-line"></i>Kod BLIK błędny lub wygasły</button>
+    <button class="press" data-act="sim" data-s="declined"><i class="ri-close-circle-line"></i>Płatność odrzucona w banku</button>
+    <button class="press" data-act="sim" data-s="timeout"><i class="ri-time-line"></i>Brak potwierdzenia na czas</button>
+    <button class="press" data-act="sim" data-s="cancel"><i class="ri-forbid-line"></i>Anulowanie przez klienta</button>
+    <button class="press" data-act="sim" data-s="nomic"><i class="ri-mic-off-line"></i>Brak dostępu do mikrofonu</button>
+  </div></div></div>
  </div>
 </div>
 <script>
-const T={n:{name:'Normalny',desc:'Dorośli od 16 lat',price:45,icon:'ri-user-line',p:1},
-         u:{name:'Ulgowy',desc:'Dzieci 3–16 lat, studenci, seniorzy',price:30,icon:'ri-bear-smile-line',p:1},
-         f:{name:'Rodzinny 2+2',desc:'Dwoje dorosłych i dwoje dzieci',price:130,icon:'ri-parent-line',p:4}};
-const FEE=1, RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const STEPS=[['scan','Skan QR'],['greet','Rozmowa głosowa'],['tickets','Wybór biletów'],['summary','Koszyk i podsumowanie'],['pay','Płatność'],['proc','Przetwarzanie'],['done','Potwierdzenie']];
+const T={n:{name:'Normalny',desc:'Osoby od 16 lat',price:45,icon:'ri-user-line',p:1,f:['normalny','normalne','normalnych']},
+         u:{name:'Ulgowy',desc:'Dzieci 3–15 lat, studenci, seniorzy 65+',price:30,icon:'ri-user-smile-line',p:1,f:['ulgowy','ulgowe','ulgowych']},
+         f:{name:'Rodzinny 2+2',desc:'Dwoje dorosłych i dwoje dzieci 3–15 lat',price:130,icon:'ri-parent-line',p:4,f:['rodzinny','rodzinne','rodzinnych']}};
+const FEE=1, RM=matchMedia('(prefers-reduced-motion: reduce)').matches, DEMO='777204';
+const Q=new URLSearchParams(location.search);
+const APPLE=Q.get('pay')?Q.get('pay')==='apple':/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+const W=APPLE?{n:'Apple Pay',logo:'applePay',wl:'Apple Wallet'}:{n:'Google Pay',logo:'gPay',wl:'Google Wallet'};
+const DATES=[{rel:'Dziś',d:'sob.',dd:'7.11.2026',sp:'dziś, sobotę 7 listopada'},{rel:'Jutro',d:'niedz.',dd:'8.11.2026',sp:'jutro, niedzielę 8 listopada'},{rel:'',d:'pon.',dd:'9.11.2026',sp:'poniedziałek 9 listopada'}];
+const STEPS=[['scan','Skan kodu QR','·'],['greet','Rozmowa z asystentką','1'],['tickets','Bilety i suma','1'],['pay','Podsumowanie i płatność','2'],['proc','Autoryzacja w banku','2'],['done','Bilet','3']];
 let S;
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const zl=v=>v.toFixed(2).replace('.',',')+' zł';
-function reset(){S={view:'scan',cart:{n:0,u:0,f:0},method:'blik',code:'',timers:[],busy:false,kp:false,scanned:false,replay:false};}
+const zlS=v=>(v%1?v.toFixed(2).replace('.',','):String(v))+' zł';
+function reset(){S={view:'scan',cart:{n:0,u:0,f:0},method:'wallet',code:'',timers:[],iv:null,busy:false,kp:false,scanned:false,replay:false,date:0,dateOk:false,sim:null,fail:null,nomic:false,typing:false,tleft:120,phase:0,wallet:false};}
 reset();
 const haptic=(p=8)=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
 document.addEventListener('pointerdown',e=>{if(e.target.closest('button,.tk,.opt'))haptic(6)},{passive:true});
-
 function later(fn,ms){const id=setTimeout(fn,ms);S.timers.push(id);return id}
-function clearT(){S.timers.forEach(clearTimeout);S.timers=[];S.busy=false;$$('.round').forEach(r=>r.classList.remove('rec'))}
-function toast(m,ic='ri-information-line'){const t=$('#toast');t.innerHTML=`<i class="${ic}"></i><span></span>`;t.lastChild.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2200)}
+function clearT(){S.timers.forEach(clearTimeout);S.timers=[];clearInterval(S.iv);S.iv=null;S.busy=false;$$('.round').forEach(r=>r.classList.remove('rec'))}
+function toast(m,ic='ri-information-line'){const t=$('#toast');t.innerHTML=`<i class="${ic}"></i><span></span>`;t.lastChild.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2400)}
 function count(){return Object.values(S.cart).reduce((a,b)=>a+b,0)}
 function sub(){return Object.entries(S.cart).reduce((a,[k,q])=>a+q*T[k].price,0)}
+function fee(){return count()?FEE:0}
 function total(){return count()?sub()+FEE:0}
 function people(){return Object.entries(S.cart).reduce((a,[k,q])=>a+q*T[k].p,0)}
 function what(){return Object.entries(S.cart).filter(([,q])=>q).map(([k,q])=>q+' × '+T[k].name).join(' · ')}
 function plural(n,a,b,c){return n===1?a:(n%10>=2&&n%10<=4&&(n%100<10||n%100>=20))?b:c}
+const NUMW=['zero','jeden','dwa','trzy','cztery','pięć','sześć','siedem','osiem','dziewięć','dziesięć'];
+function spoken(){const p=Object.entries(S.cart).filter(([,q])=>q).map(([k,q])=>(NUMW[q]||q)+' '+plural(q,...T[k].f));
+  return p.length>1?p.slice(0,-1).join(', ')+' i '+p[p.length-1]:(p[0]||'')}
+function dlab(i=S.date){const d=DATES[i];return (d.rel?d.rel+', ':'')+d.d+' '+d.dd}
+function dtk(i=S.date){const d=DATES[i];return d.d+', '+d.dd}
+function mname(m=S.method){return {wallet:W.n,blik:'BLIK',card:'Karta'}[m]}
 
-/* voice state machine: speak (assistant TTS) · listen · user (ASR) · think · ok · off */
+/* voice state machine */
 const V={mode:'off',energy:0,target:0};
-const LBL={speak:['ri-volume-up-line','Asystent mówi'],listen:['','Słucham'],user:['','Słyszę Cię…'],think:['ri-loader-4-line','Rozumiem…'],ok:['ri-check-line','Rozpoznano'],off:['ri-volume-mute-line','Pauza']};
+const LBL={speak:['ri-volume-up-line','Asystentka mówi'],listen:['','Słucham'],user:['','Słyszę Cię…'],think:['ri-loader-4-line','Rozumiem…'],ok:['ri-check-line','Rozpoznano'],off:['ri-volume-mute-line','Pauza']};
 function voice(m){V.mode=m;V.target={speak:.85,user:.75,listen:.12,think:.1,ok:.1,off:0}[m];
   $$('.view.active .vstate').forEach(p=>{p.dataset.m=m;p.querySelector('i').className=LBL[m][0];p.querySelector('.lb').textContent=LBL[m][1]});
   $('#wbox').dataset.m=m;
-  const mic=$('#micBig');mic.classList.toggle('listen',m==='listen');mic.classList.toggle('rec',m==='user');mic.classList.toggle('busy',m==='think'||m==='speak');
+  const mic=$('#micBig');mic.classList.toggle('listen',m==='listen'&&!S.nomic);mic.classList.toggle('rec',m==='user');mic.classList.toggle('busy',m==='think'||m==='speak');
   if(S.view==='greet'){$('#hint').textContent={speak:'\u00a0',listen:'Powiedz, jakich biletów potrzebujesz',user:'Mów dalej…',think:'Sprawdzam bilety…',ok:'Mam to!',off:'\u00a0'}[m];
     $('#chips').classList.toggle('off',m!=='listen')}
 }
-
-/* waveform */
-const WAVES=[['#bigwave',44],['#w2',24],['#w3',24],['#w4',24],['#w5',14]];
+const WAVES=[['#bigwave',44],['#w2',24],['#w3',24],['#w6',24],['#w5',14]];
 WAVES.forEach(([s,n])=>{const el=$(s);for(let i=0;i<n;i++)el.appendChild(document.createElement('b'))});
 function animWave(t){
   V.energy+=(V.target-V.energy)*.12;
@@ -547,151 +731,235 @@ function animWave(t){
   requestAnimationFrame(animWave)}
 requestAnimationFrame(animWave);
 
-/* chat + live transcript */
 function bubble(box,who,text){const d=document.createElement('div');d.className='bub '+who;d.textContent=text||'';box.appendChild(d);while(box.children.length>6)box.firstChild.remove();return d}
 function thinking(box){const d=document.createElement('div');d.className='bub a think';d.innerHTML='<b></b><b></b><b></b>';box.appendChild(d);return d}
-function stream(el,text,who,done){const w=text.split(' ');let i=0;const sp=who==='u'?170:115;
+function stream(el,text,who,done){const w=text.split(' ');let i=0;const sp=who==='u'?170:110;
   voice(who==='u'?'user':'speak');
   const tick=()=>{i++;const fin=w.slice(0,who==='u'?i-1:i).join(' ');const im=who==='u'?w[i-1]:'';
     el.textContent=fin+(fin&&im?' ':'');if(im){const s=document.createElement('span');s.className='im';s.textContent=im;el.append(s)}
     if(i<w.length){const c=document.createElement('i');c.className='caret';el.append(c);later(tick,sp+(Math.random()*60|0))}
     else later(()=>{el.textContent=text;done&&done()},who==='u'?220:0)};
   tick()}
-function say(box,text,next){const th=thinking(box);voice('think');later(()=>{th.remove();const b=bubble(box,'a','');stream(b,text,'a',()=>{voice('listen');next&&next()})},600)}
+function say(box,text,next){const th=thinking(box);voice('think');later(()=>{th.remove();const b=bubble(box,'a','');stream(b,text,'a',()=>{voice('listen');next&&next()})},550)}
 function addFrom(spec){spec.split(',').forEach(p=>{const[k,q]=p.split(':');S.cart[k]+=+q})}
-function reply(){const parts=what();return parts?'Dodałam: '+parts.toLowerCase()+'. Bilety '+zl(sub())+' + 1 zł opłaty. Coś jeszcze?':'Jakie bilety kupujesz?'}
-
+function reply(){if(!count())return 'Jakie bilety kupujesz?';
+  return 'Dodałam '+spoken()+'. Razem z opłatą serwisową '+zlS(total())+'. Bilety na '+DATES[S.date].sp+'?'}
 /* render */
-function stepper(k,t,q,dis){return `<span class="step"><button class="mi" data-act="dec" data-k="${k}" ${dis&&!q?'disabled':''} aria-label="Mniej: ${t.name}"><i class="ri-subtract-line"></i></button><span class="q" data-q="${k}">${q}</span><button class="pl" data-act="inc" data-k="${k}" aria-label="Więcej: ${t.name}"><i class="ri-add-line"></i></button></span>`}
+function stepper(k,t,q){return `<span class="step"><button class="mi" data-act="dec" data-k="${k}" ${!q?'disabled':''} aria-label="Mniej: ${t.name}"><i class="ri-subtract-line"></i></button><span class="q" data-q="${k}" aria-live="polite">${q}</span><button class="pl" data-act="inc" data-k="${k}" aria-label="Więcej: ${t.name}"><i class="ri-add-line"></i></button></span>`}
 function renderTickets(){
   const L=$('#tkList');L.innerHTML='';
-  Object.entries(T).forEach(([k,t])=>{const q=S.cart[k];const d=document.createElement('div');d.className='tk'+(q?' sel':'');d.dataset.k=k;
-    d.innerHTML=`<span class="ti"><i class="${t.icon}"></i></span><span class="tx"><b>${t.name}</b><span>${t.desc}</span></span><span class="rt"><span class="pr">${zl(t.price)}</span>${stepper(k,t,q,true)}</span>`;
+  Object.entries(T).forEach(([k,t])=>{const q=S.cart[k];const d=document.createElement('div');d.className='tk'+(q?' sel':'');d.dataset.k=k;d.setAttribute('role','listitem');
+    d.innerHTML=`<span class="ti"><i class="${t.icon}"></i></span><span class="tx"><b>${t.name}</b><span>${t.desc}</span></span><span class="rt"><span class="pr">${zl(t.price)}</span>${stepper(k,t,q)}</span>`;
     L.appendChild(d)});
-  $('#cnt').textContent=count();$('#cartSum').textContent=zl(sub());$('#toCart').disabled=!count();sheetShadow();
+  $('#cnt').textContent=count();$('#sub').textContent=zl(sub());$('#feeV').textContent=zl(fee());$('#total').textContent=zl(total());
+  $('#cartSum').textContent=zl(total());$('#toPayL').textContent=count()?'Do zapłaty':'Wybierz bilety';$('#toPay').disabled=!count();sheetShadow();
 }
-function renderSummary(){
-  const L=$('#lines');L.innerHTML='';
-  Object.entries(T).forEach(([k,t])=>{const q=S.cart[k];if(!q)return;const d=document.createElement('div');d.className='line';
-    d.innerHTML=`<span class="tx"><b>${t.name}</b><span>${zl(t.price)} / szt.</span></span>${stepper(k,t,q,false)}<span class="am">${zl(q*t.price)}</span>`;L.appendChild(d)});
-  $('#empty').style.display=count()?'none':'block';
-  $('#sub').textContent=zl(sub());$('#feeV').textContent=zl(count()?FEE:0);$('#total').textContent=zl(total());$('#toPay').disabled=!count();$('#micSum').disabled=!count();sheetShadow();
-}
+function renderDates(){$$('.dlab').forEach(e=>e.textContent=dlab());$('#tDate').textContent=dtk();
+  $('#dateList').innerHTML=DATES.map((d,i)=>`<button class="press ${i===S.date?'on':''}" data-act="setdate" data-i="${i}"><i class="${i===S.date?'ri-checkbox-circle-fill':'ri-calendar-line'}"></i>${dlab(i)}</button>`).join('')}
+function renderPayHead(){$('#payTotal').textContent=zl(total());$('#payBd').textContent='Bilety '+zl(sub())+' · Opłata serwisowa '+zl(fee());
+  const o=$('#ordWhat');o.firstChild.textContent=what()||'Brak biletów';}
+function renderMethods(){$$('#pm .opt').forEach(o=>{const on=o.dataset.m===S.method;o.classList.toggle('sel',on);o.setAttribute('aria-checked',on);o.tabIndex=on?0:-1})}
 function renderCode(){
   const c=$('#code');let h='';for(let i=0;i<6;i++){if(i===3)h+='<span class="sep"></span>';const v=S.code[i];
     h+=`<span class="d ${v!==undefined?'f':''} ${i===S.code.length&&S.kp?'cur':''}">${v===undefined?'':(i<3?'•':v)}</span>`}
   c.innerHTML=h;c.classList.toggle('ok',S.code.length===6);c.classList.remove('bad');
   $('#payBtn').classList.toggle('dim',!payReady());$('#payLbl').textContent='Zapłać '+zl(total());
   const bs=$('#blikSub');bs.classList.remove('err');const left=6-S.code.length;
-  bs.textContent=left===0?'Kod ••• '+S.code.slice(3)+' gotowy':(S.code.length?'Jeszcze '+left+' '+plural(left,'cyfra','cyfry','cyfr'):'Podyktuj lub wpisz 6 cyfr');
-  $('#kpBtn').classList.toggle('on',S.kp);
+  bs.textContent=left===0?'Kod ••• '+S.code.slice(3)+' gotowy':(S.code.length?'Jeszcze '+left+' '+plural(left,'cyfra','cyfry','cyfr'):'Wpisz 6 cyfr z aplikacji banku');
+  $('#kpBtn').innerHTML=S.kp?'<i class="ri-keyboard-line"></i>Ukryj klawiaturę':'<i class="ri-keyboard-line"></i>'+(S.code.length?'Popraw kod':'Wpisz kod');
 }
-function codeError(){const c=$('#code');c.classList.remove('shake');void c.offsetWidth;c.classList.add('shake','bad');const bs=$('#blikSub');bs.textContent='Wpisz wszystkie 6 cyfr kodu BLIK';bs.classList.add('err');haptic([20,40,20])}
+function codeError(msg){const c=$('#code');c.classList.remove('shake');void c.offsetWidth;c.classList.add('shake','bad');const bs=$('#blikSub');bs.textContent=msg||'Wpisz wszystkie 6 cyfr kodu BLIK';bs.classList.add('err');haptic([20,40,20])}
 function payReady(){return S.method!=='blik'||S.code.length===6}
 function bump(k){$$(`[data-q="${k}"]`).forEach(e=>{e.classList.remove('bump');void e.offsetWidth;e.classList.add('bump')})}
-function setKp(on){S.kp=on;$('#paySheet').classList.toggle('kp',on);renderCode();sheetShadow()}
+function setKp(on){on=!!on;S.kp=on;$('#paySheet').classList.toggle('kp',on);$('#v-pay').classList.toggle('kpon',on);if(on)$('#dwarn').classList.remove('show');renderCode();sheetShadow()}
 $$('.sh-body').forEach(b=>b.addEventListener('scroll',sheetShadow,{passive:true}));
 function sheetShadow(){$$('.sh-body').forEach(b=>b.closest('.sheet').classList.toggle('scrolled',b.scrollTop+b.clientHeight<b.scrollHeight-2))}
+function dlg(id,on){$('#'+id).classList.toggle('show',on)}
+function closeDlgs(){$$('.dlg').forEach(d=>d.classList.remove('show'))}
 
 /* navigation */
 function go(v){
-  S.view=v;$$('.view').forEach(x=>x.classList.toggle('active',x.dataset.view===v));
-  $$('#steps button').forEach(b=>b.classList.toggle('on',b.dataset.to===v));
+  S.view=v;$$('.view').forEach(x=>x.classList.toggle('active',x.dataset.view===v));closeDlgs();
+  $$('#steps button').forEach(b=>b.classList.toggle('on',b.dataset.to===v||(v==='error'&&b.dataset.to==='proc')));
   document.querySelector('meta[name=theme-color]').content=v==='done'?'#F4F5F7':(v==='scan'?'#000000':'#1E1F24');
-  ({greet:enterGreet,tickets:enterTickets,summary:enterSummary,pay:enterPay,proc:enterProc,done:enterDone,scan:fit}[v]||(()=>{}))();
+  ({greet:enterGreet,tickets:enterTickets,pay:enterPay,proc:enterProc,done:enterDone,error:enterError,scan:fit}[v]||(()=>{}))();
   voice(V.mode);requestAnimationFrame(sheetShadow);
 }
+function setNomic(on){on=!!on;S.nomic=on;$('#v-greet').classList.toggle('nomic',on);$('#micBig').querySelector('i').className=on?'ri-mic-off-line':'ri-mic-fill';$('#micBig').setAttribute('aria-label',on?'Mikrofon niedostępny':'Mów')}
+function setTyping(on){on=!!on;S.typing=on;$('#v-greet').classList.toggle('typing',on);$('#typeBtn').classList.toggle('on',on);if(on)setTimeout(()=>$('#tin').focus(),50);else $('#tin').blur()}
 function enterGreet(){
   const c=$('#greetChat');
-  if(!c.children.length){S.busy=true;voice('think');later(()=>{const b=bubble(c,'a','');stream(b,'Dzień dobry! Jestem asystentem kasy ZOO. Jakie bilety kupujesz? Mamy normalne, ulgowe i rodzinne.','a',()=>{S.busy=false;voice('listen')})},500)}
+  if(!c.children.length){S.busy=true;voice('think');
+    const txt=S.nomic?'Dzień dobry! Jestem asystentką Miejskiego ZOO. Nie mam dostępu do mikrofonu, więc napisz, jakich biletów potrzebujesz, albo wybierz je ręcznie.':'Dzień dobry! Jestem asystentką Miejskiego ZOO. Jakie bilety kupujesz na dziś? Mamy normalne, ulgowe i rodzinne.';
+    later(()=>{const b=bubble(c,'a','');stream(b,txt,'a',()=>{S.busy=false;voice('listen')})},500)}
   else voice('listen');
 }
-function enterTickets(){renderTickets();const c=$('#tkChat');if(!c.children.length)bubble(c,'a',count()?reply():'Wybierz bilety albo powiedz, ile ich potrzebujesz.');if(!S.busy)voice('listen')}
-function enterSummary(){renderSummary();const c=$('#sumChat');c.innerHTML='';
-  if(count()){S.busy=true;say(c,'Do zapłaty '+zl(total())+'. Możesz zmienić liczbę biletów albo powiedzieć „płacę”.',()=>S.busy=false)}else{bubble(c,'a','Koszyk jest pusty. Dodaj bilety.');voice('listen')}}
+function enterTickets(){setTyping(false);renderTickets();renderDates();const c=$('#tkChat');if(!c.children.length)bubble(c,'a',count()?reply():'Wybierz bilety i ich liczbę. Możesz też do mnie mówić.');if(!S.busy)voice('listen')}
 function enterPay(){
-  $('#payTotal').textContent=zl(total());const c=$('#payChat');c.innerHTML='';setKp(false);
-  S.busy=true;say(c,'Podyktuj kod BLIK albo wybierz Apple Pay lub Google Pay.',()=>S.busy=false);renderCode();
+  renderPayHead();renderDates();renderMethods();$('#dwarn').classList.remove('show');$('#email').classList.remove('bad');
+  const c=$('#payChat');c.innerHTML='';const retry=S.retry;S.retry=false;
+  setKp(retry&&S.method==='blik');
+  const msg=retry?(S.method==='blik'?'Wpisz nowy kod BLIK z aplikacji banku.':'Spróbujmy jeszcze raz. Wybierz metodę i zapłać.')
+    :'Do zapłaty '+zlS(total())+'. Najszybciej zapłacisz '+W.n+'. Kod BLIK wpisz na klawiaturze, nie mów go na głos.';
+  S.busy=true;say(c,msg,()=>S.busy=false);renderCode();
+  const b=$('#paySheet .sh-body');b.scrollTop=0;
 }
+const PROC={
+  blik:{rows:[['Sprawdzam kod','Kod przyjęty'],['Czekam na potwierdzenie w banku','Potwierdzono w banku'],['Wystawiam bilety','Bilety wystawione']],
+        t:[['Sprawdzam kod BLIK','Łączę się z bankiem…'],['Potwierdź w aplikacji banku','Otwórz aplikację banku i zatwierdź płatność.'],['Wystawiam bilety','Bank potwierdził płatność. Jeszcze chwila…']]},
+  wallet:{rows:[['Czekam na zatwierdzenie w telefonie','Zatwierdzono w telefonie'],['Czekam na potwierdzenie w banku','Potwierdzono w banku'],['Wystawiam bilety','Bilety wystawione']],
+        t:[['Potwierdź w '+W.n,'Zatwierdź płatność w telefonie: twarzą, odciskiem palca lub kodem.'],['Czekam na bank','Płatność zatwierdzona w telefonie. Bank ją potwierdza…'],['Wystawiam bilety','Bank potwierdził płatność. Jeszcze chwila…']]},
+  card:{rows:[['Sprawdzam kartę','Karta przyjęta'],['Czekam na 3-D Secure w banku','Potwierdzono w banku'],['Wystawiam bilety','Bilety wystawione']],
+        t:[['Sprawdzam kartę','Łączę się z bankiem…'],['Potwierdź w aplikacji banku','Bank prosi o potwierdzenie 3-D Secure.'],['Wystawiam bilety','Bank potwierdził płatność. Jeszcze chwila…']]}};
+function fmtT(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function setTime(){$('#ptime').textContent=fmtT(S.tleft);$('#ptimer').classList.toggle('low',S.tleft<=30)}
+function procPhase(i){const P=PROC[S.method];S.phase=i;const tt=P.t[Math.min(i,2)];$('#procTitle').textContent=i>2?'Bilety gotowe':tt[0];$('#procText').textContent=i>2?'Otwieram Twój bilet…':tt[1];
+  $$('#prog div').forEach((r,j)=>{r.className=j<i?'done':(j===i?'now':'');r.querySelector('span').textContent=P.rows[j][j<i?1:0];r.querySelector('i').className=j<i?'ri-checkbox-circle-fill':(j===i?'ri-loader-4-line':'ri-checkbox-blank-circle-line')});
+  $('#ring').style.strokeDashoffset=364*(1-i/3)}
 function enterProc(){
-  voice('off');const m=S.method;$('#procAmt').textContent=zl(total());
-  const logo={blik:'blik',apple:'applePay',google:'gPay'}[m];
-  $('#procVia').innerHTML=`<img src="assets/${logo}.svg" alt="">`+(m==='blik'?'Kod ••• '+S.code.slice(3):(m==='apple'?'Apple Pay':'Google Pay'));
-  const txt={blik:['Potwierdź w aplikacji banku','Wysłaliśmy żądanie BLIK. Zatwierdź płatność w aplikacji bankowej.'],
-             apple:['Potwierdź Face ID','Spójrz na telefon, aby zatwierdzić płatność Apple Pay.'],
-             google:['Potwierdź w telefonie','Odblokuj telefon, aby zatwierdzić płatność Google Pay.']}[m];
-  $('#procTitle').textContent=txt[0];$('#procText').textContent=txt[1];
+  voice('off');const m=S.method,P=PROC[m];$('#procAmt').textContent=zl(total());
+  const logo={blik:'<img src="assets/blik.svg" alt="">',wallet:`<img src="assets/${W.logo}.svg" alt="">`,card:'<i class="ri-bank-card-line" style="font-size:18px"></i>'}[m];
+  $('#procVia').innerHTML=logo+(m==='blik'?'Kod ••• '+S.code.slice(3):mname(m));
+  $('#prog').innerHTML=P.rows.map(r=>`<div><i></i><span>${r[0]}</span></div>`).join('');
   const ring=$('#ring');ring.style.transition='none';ring.style.strokeDashoffset=364;void ring.getBoundingClientRect();ring.style.transition='';
-  const rows=$$('#prog div');rows.forEach(r=>{r.className='';r.querySelector('i').className='ri-checkbox-blank-circle-line'});
-  rows.forEach((r,i)=>{later(()=>{r.className='now';r.querySelector('i').className='ri-loader-4-line'},150+i*900);
-    later(()=>{r.className='done';r.querySelector('i').className='ri-checkbox-circle-fill';ring.style.strokeDashoffset=364*(1-(i+1)/3);haptic(10)},900+i*900)});
-  later(()=>{if(S.view==='proc'){haptic([15,60,25]);go('done')}},3600);
+  S.tleft=120;setTime();S.iv=setInterval(()=>{if(S.tleft>0){S.tleft--;setTime()}},1000);
+  procPhase(0);
+  later(()=>{if(S.sim==='code')return fail('code');haptic(10);procPhase(1);
+    later(()=>{if(S.sim==='declined')return fail('declined');if(S.sim==='timeout')return runTimeout();if(S.sim==='cancel')return fail('cancel');haptic(10);procPhase(2);
+      later(()=>{procPhase(3);haptic([15,60,25]);later(()=>{if(S.view==='proc')go('done')},450)},900)},2000)},1100);
 }
+function runTimeout(){clearInterval(S.iv);S.timers.forEach(clearTimeout);S.timers=[];
+  S.iv=setInterval(()=>{S.tleft=Math.max(0,S.tleft-3);setTime();if(!S.tleft){clearInterval(S.iv);later(()=>fail('timeout'),400)}},RM?1:28)}
+function fail(kind){clearT();S.sim=null;S.fail=kind;haptic([30,60,30]);go('error')}
+const ERR={
+  code:{ic:'ri-error-warning-line',t:'Kod BLIK jest błędny lub wygasł',r:'Kod BLIK działa przez 2 minuty i tylko raz. Wygeneruj nowy kod w aplikacji banku.',say:()=>'Ten kod BLIK nie zadziałał. Wygeneruj nowy kod w aplikacji banku albo zapłać '+W.n+'.'},
+  declined:{ic:'ri-close-circle-line',t:'Bank odrzucił płatność',r:'Sprawdź saldo lub limit w aplikacji banku albo wybierz inną metodę płatności.',say:()=>'Bank odrzucił płatność. Pieniądze nie zostały pobrane. Możesz spróbować inną metodą.'},
+  timeout:{ic:'ri-time-line',t:'Nie potwierdzono płatności na czas',r:'Minęły 2 minuty na potwierdzenie w aplikacji banku. Płatność wygasła.',say:()=>'Nie było potwierdzenia w banku, więc płatność wygasła. Koszyk czeka, spróbujmy jeszcze raz.'},
+  cancel:{ic:'ri-forbid-line',t:'Płatność anulowana',r:'Płatność została anulowana. Bilety są nadal w koszyku.',say:()=>'Anulowałam płatność. Koszyk zostawiłam bez zmian.'}};
+function enterError(){const E=ERR[S.fail||'code'];
+  $('#errIc').className=E.ic;$('#errT').textContent=E.t;$('#errR').textContent=E.r;
+  $('#errRecap').textContent=count()+' '+plural(count(),'bilet','bilety','biletów')+' · '+zl(total())+' · '+mname();
+  const alt=$('#errAlt');if(S.fail==='cancel'){alt.dataset.act='quit';alt.innerHTML='<i class="ri-close-line"></i><span>Przerwij zakup</span>'}
+  else{alt.dataset.act='altpay';alt.innerHTML='<i class="ri-swap-line"></i><span>Zmień metodę płatności</span>'}
+  $('.errbtns .pri').innerHTML=S.fail==='cancel'?'<i class="ri-arrow-go-back-line"></i>Wróć do płatności':'<i class="ri-refresh-line"></i>Spróbuj ponownie';
+  const c=$('#errChat');c.innerHTML='';S.busy=true;say(c,E.say(),()=>S.busy=false)}
 function enterDone(){
-  $('#tWhat').textContent=what();$('#tPeople').textContent=people();
-  $('#tPaid').textContent=zl(total())+' · '+({blik:'BLIK',apple:'Apple Pay',google:'Google Pay'})[S.method];
+  $('#tWhat').textContent=what();$('#tPeople').textContent=people();$('#tDate').textContent=dtk();$('#tFee').textContent=zl(fee());
+  $('#tPaid').textContent=zl(total());$('#tMeth').textContent=mname();$('#tNote').style.display=S.cart.u?'flex':'none';
+  const em=$('#email').value.trim();$('#doneSub').textContent=em?'Bilet jest w telefonie. Wysłaliśmy go też na '+em+'.':'Bilet jest w telefonie. Zapisz go w '+W.wl+', żeby mieć go pod ręką.';
+  const wb=$('#walletBtn');wb.classList.remove('done');wb.classList.add('pri');$('#walletL').textContent='Dodaj do '+W.wl;wb.querySelector('i').className='ri-wallet-3-line';
   $('.conf-body').scrollTop=0;later(()=>{S.replay=true;later(()=>S.replay=false,1800)},900);
 }
 function restart(){
-  clearT();reset();
-  ['#greetChat','#tkChat','#payChat','#sumChat'].forEach(s=>$(s).innerHTML='');
+  clearT();const nm=S.nomic;reset();
+  ['#greetChat','#tkChat','#payChat','#errChat'].forEach(s=>$(s).innerHTML='');
   $('#v-scan').classList.remove('focus');$('#found').classList.remove('show');$('#scanHint').textContent='Dotknij, aby zeskanować';
-  $$('.opt').forEach(o=>{o.classList.toggle('sel',o.dataset.m==='blik');o.setAttribute('aria-checked',o.dataset.m==='blik')});setKp(false);
+  $('#email').value='';setNomic(false);setTyping(false);$('#tin').value='';setKp(false);renderMethods();renderDates();
   $('#payBtn').classList.remove('loading');voice('off');go('scan');
 }
 function fit(){const st=$('#stage'),tg=$('#target');if(!st||!st.clientHeight)return;const k=Math.min(1,(st.clientHeight-12)/340,(st.clientWidth-40)/276);tg.style.transform=`scale(${k.toFixed(3)})`}
 addEventListener('resize',()=>{fit();sheetShadow()});
-
+/* init */
+$('#wLogo').src='assets/'+W.logo+'.svg';$('#wLogo').alt=W.n;$('#wName').textContent=W.n;
 (function(){const k=$('#keypad');[1,2,3,4,5,6,7,8,9,'Gotowe',0,'del'].forEach(v=>{const b=document.createElement('button');
   if(v==='del'){b.innerHTML='<i class="ri-delete-back-2-line"></i>';b.className='fn';b.setAttribute('aria-label','Usuń')}else{b.textContent=v;if(typeof v==='string')b.className='fn'}
   b.dataset.act='key';b.dataset.v=v;k.appendChild(b)})})();
+renderDates();renderMethods();
+
+function toTickets(text,fromVoice){
+  const c=$('#greetChat');const th=thinking(c);voice('think');
+  later(()=>{th.remove();voice('ok');haptic(10);
+    later(()=>{S.busy=false;const t=$('#tkChat');t.innerHTML='';bubble(t,'u',text);S.busy=true;go('tickets');say(t,reply(),()=>S.busy=false)},450)},700)}
+function parseText(s){s=s.toLowerCase();const W2={jeden:1,jedna:1,jednego:1,dwa:2,dwie:2,dwóch:2,trzy:3,cztery:4,'pięć':5};let hit=false;const add={n:0,u:0,f:0};
+  const re=/(\d+|jeden|jedna|jednego|dwa|dwie|dwóch|trzy|cztery|pięć)?\s*(?:x\s*)?(?:bilet\w*\s+)?(normaln|ulgow|rodzin|dorosł|dzieci|dziec)\w*/g;let m;
+  while((m=re.exec(s))){const q=m[1]?(+m[1]||W2[m[1]]||1):1;const k={normaln:'n',dorosł:'n',ulgow:'u',dzieci:'u',dziec:'u',rodzin:'f'}[m[2]];add[k]+=Math.min(q,10);hit=true}
+  return hit?add:null}
+$('#inputbar').addEventListener('submit',e=>{e.preventDefault();const v=$('#tin').value.trim();if(!v||S.busy)return;
+  const c=$('#greetChat');bubble(c,'u',v);$('#tin').value='';const p=parseText(v);S.busy=true;
+  if(!p){say(c,'Nie zrozumiałam. Napisz na przykład „2 normalne i 1 ulgowy” albo wybierz bilety ręcznie.',()=>S.busy=false);return}
+  Object.keys(p).forEach(k=>S.cart[k]+=p[k]);setTyping(false);toTickets(v)});
+
+function demo(s){closeDlgs();$('#simlist').classList.remove('show');
+  if(s==='nomic'){clearT();setNomic(true);S.cart={n:0,u:0,f:0};S.dateOk=false;S.code='';['#greetChat','#tkChat','#payChat','#errChat'].forEach(x=>$(x).innerHTML='');if(S.view==='greet')enterGreet();else go('greet');toast('Demo: brak dostępu do mikrofonu','ri-flask-line');return}
+  if(S.view==='proc'){if(s==='timeout')runTimeout();else fail(s);return}
+  if(!count())S.cart={n:2,u:1,f:0};S.method='blik';S.code=DEMO;renderMethods();clearT();S.sim=s;go('proc');
+  if(s==='cancel')later(()=>fail('cancel'),1600)}
+
+let lpT=null;
+document.addEventListener('pointerdown',e=>{const m=e.target.closest('.merchant');if(!m)return;m.classList.add('lp');lpT=setTimeout(()=>{m.classList.remove('lp');haptic([10,30,10]);dlg('dlgSim',true)},650)});
+['pointerup','pointercancel','pointerleave'].forEach(t=>document.addEventListener(t,()=>{clearTimeout(lpT);$$('.merchant.lp').forEach(x=>x.classList.remove('lp'))},true));
+document.addEventListener('contextmenu',e=>{if(e.target.closest('.merchant'))e.preventDefault()});
+
+document.addEventListener('keydown',e=>{
+  const o=e.target.closest&&e.target.closest('.opt');
+  if(o&&e.target===o){const os=$$('#pm .opt');let i=os.indexOf(o);
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();o.click();return}
+    if(['ArrowDown','ArrowRight','ArrowUp','ArrowLeft'].includes(e.key)){e.preventDefault();i=(i+(e.key==='ArrowDown'||e.key==='ArrowRight'?1:os.length-1))%os.length;os[i].focus();os[i].click();return}}
+  if(S.view==='pay'&&S.kp){if(/^\d$/.test(e.key)){$(`#keypad [data-v="${e.key}"]`).click()}else if(e.key==='Backspace'){$('#keypad [data-v="del"]').click()}else if(e.key==='Escape'||e.key==='Enter'){setKp(false)}}
+  if(e.key==='Escape')closeDlgs();
+});
 
 document.addEventListener('click',e=>{
   const el=e.target.closest('[data-act]');if(!el||el.disabled)return;const a=el.dataset.act;
   switch(a){
   case 'go':clearT();go(el.dataset.to);break;
   case 'restart':restart();break;
-  case 'toast':toast(el.dataset.msg);break;
+  case 'quit':if(['scan','done'].includes(S.view))restart();else dlg('dlgQuit',true);break;
+  case 'dlgclose':if(el.classList.contains('dlg')&&e.target!==el)return;closeDlgs();break;
+  case 'toast':e.preventDefault();toast(el.dataset.msg);break;
   case 'torch':el.classList.toggle('on');toast(el.classList.contains('on')?'Latarka włączona (symulacja)':'Latarka wyłączona','ri-flashlight-line');break;
-  case 'wallet':toast('Bilet dodany do Wallet (symulacja)','ri-check-line');haptic(12);break;
+  case 'wallet':if(el.classList.contains('done'))break;el.classList.add('done');el.classList.remove('pri');el.querySelector('i').className='ri-check-line';$('#walletL').textContent='Dodano do '+W.wl;toast('Symulacja: bilet dodany do '+W.wl,'ri-check-line');haptic(12);break;
   case 'replay':S.replay=true;later(()=>S.replay=false,1800);break;
+  case 'simtoggle':$('#simlist').classList.toggle('show');break;
+  case 'sim':demo(el.dataset.s);break;
+  case 'date':renderDates();dlg('dlgDate',true);break;
+  case 'setdate':{S.date=+el.dataset.i;S.dateOk=true;renderDates();closeDlgs();const c=$('#tkChat');bubble(c,'a','Zmieniłam datę na '+DATES[S.date].sp+'.');toast('Data wizyty: '+dlab(),'ri-calendar-check-line');break}
+  case 'type':if(S.busy&&V.mode==='speak'){toast('Chwilka, asystentka kończy mówić','ri-volume-up-line');return}setTyping(!S.typing);break;
   case 'scan':{if(S.scanned)return;S.scanned=true;$('#v-scan').classList.add('focus');haptic([10,40,10]);$('#scanHint').textContent='Kod rozpoznany · otwieram kasę';later(()=>$('#found').classList.add('show'),300);later(()=>{if(S.view==='scan')go('greet')},2200);break}
   case 'say':{
-    if(S.busy){if(V.mode==='speak')toast('Chwilka, asystent kończy mówić','ri-volume-up-line');return}
-    S.busy=true;const c=$('#greetChat');
-    const u=bubble(c,'u','');stream(u,el.dataset.say,'u',()=>{const th=thinking(c);voice('think');
-      later(()=>{th.remove();addFrom(el.dataset.add);voice('ok');haptic(10);
-        later(()=>{S.busy=false;const t=$('#tkChat');t.innerHTML='';bubble(t,'u',el.dataset.say);S.busy=true;go('tickets');say(t,reply(),()=>S.busy=false)},450)},700)});break}
+    if(S.nomic){toast('Mikrofon jest zablokowany. Włącz go w ustawieniach przeglądarki.','ri-mic-off-line');return}
+    if(S.busy){if(V.mode==='speak')toast('Chwilka, asystentka kończy mówić','ri-volume-up-line');return}
+    S.busy=true;setTyping(false);const c=$('#greetChat');
+    const u=bubble(c,'u','');stream(u,el.dataset.say,'u',()=>{addFrom(el.dataset.add);toTickets(el.dataset.say,true)});break}
   case 'speak2':{
+    if(S.nomic){toast('Mikrofon jest zablokowany. Użyj przycisków.','ri-mic-off-line');return}
     if(S.busy)return;S.busy=true;const c=$('#tkChat');el.classList.add('rec');
-    const pick=!S.cart.u?{say:'Dodaj jeden ulgowy.',add:'u:1'}:{say:'Jeszcze jeden normalny.',add:'n:1'};
-    const u=bubble(c,'u','');stream(u,pick.say,'u',()=>{el.classList.remove('rec');const th=thinking(c);voice('think');
-      later(()=>{th.remove();addFrom(pick.add);renderTickets();bump(pick.add[0]);haptic(10);const b=bubble(c,'a','');stream(b,reply(),'a',()=>{voice('listen');S.busy=false})},600)});break}
-  case 'speak3':{
-    if(S.busy)return;S.busy=true;const c=$('#sumChat');el.classList.add('rec');
-    const u=bubble(c,'u','');stream(u,'Płacę.','u',()=>{el.classList.remove('rec');voice('ok');later(()=>{S.busy=false;go('pay')},500)});break}
-  case 'inc':case 'dec':{e.stopPropagation();const k=el.dataset.k;S.cart[k]=Math.max(0,S.cart[k]+(a==='inc'?1:-1));
-    if(S.view==='tickets')renderTickets();else renderSummary();bump(k);break}
-  case 'method':{if(e.target.closest('.codeact,.code'))return;S.method=el.dataset.m;$$('.opt').forEach(o=>{o.classList.toggle('sel',o===el);o.setAttribute('aria-checked',o===el)});
-    if(S.method!=='blik')setKp(false);renderCode();break}
-  case 'dictate':{if(S.busy)return;S.busy=true;setKp(false);S.code='';renderCode();const c=$('#payChat');c.querySelectorAll('.bub.code').forEach(x=>x.remove());const u=bubble(c,'u','Kod BLIK…');u.classList.add('code');
-    const dg='739204';voice('user');
+    let pick;if(!count())pick={say:'Poproszę dwa normalne i jeden ulgowy.',add:'n:2,u:1'};else if(!S.dateOk)pick={say:'Tak, na dziś.',date:1};else pick={say:'Płacę.',pay:1};
+    const u=bubble(c,'u','');stream(u,pick.say,'u',()=>{el.classList.remove('rec');
+      if(pick.pay){voice('ok');later(()=>{S.busy=false;go('pay')},500);return}
+      const th=thinking(c);voice('think');
+      later(()=>{th.remove();let r;if(pick.add){addFrom(pick.add);renderTickets();bump('n');bump('u');r=reply()}else{S.dateOk=true;r='Świetnie. Do zapłaty '+zlS(total())+'. Powiedz „płacę” albo dotknij przycisku.'}
+        haptic(10);const b=bubble(c,'a','');stream(b,r,'a',()=>{voice('listen');S.busy=false})},600)});break}
+  case 'inc':case 'dec':{e.stopPropagation();const k=el.dataset.k;S.cart[k]=Math.max(0,Math.min(20,S.cart[k]+(a==='inc'?1:-1)));renderTickets();bump(k);break}
+  case 'method':{const m=el.dataset.m;const was=S.method;S.method=m;renderMethods();
+    if(m==='blik'){if(S.code.length<6&&!S.kp)setKp(true)}else setKp(false);
+    if(m!==was)$('#dwarn').classList.remove('show');renderCode();break}
+  case 'dictask':{$('#dwarn').classList.toggle('show');if(S.kp)setKp(false);$('#dwarn').classList.add('show');break}
+  case 'dictate':{if(S.busy)return;S.busy=true;$('#dwarn').classList.remove('show');setKp(false);S.code='';renderCode();const c=$('#payChat');c.querySelectorAll('.bub.code').forEach(x=>x.remove());const u=bubble(c,'u','Kod BLIK…');u.classList.add('code');
+    const dg=DEMO;voice('user');
     [...dg].forEach((d,i)=>later(()=>{S.code+=d;renderCode();u.textContent='Kod BLIK: '+'•••'.slice(0,Math.min(i+1,3))+(i>=3?' '+dg.slice(3,i+1):'')},350+i*260));
     later(()=>{voice('ok');haptic(10);later(()=>{voice('listen');S.busy=false},800)},2110);break}
-  case 'keypad':{const on=!S.kp;if(on)S.code='';setKp(on);break}
+  case 'keypad':{if(S.method!=='blik'){S.method='blik';renderMethods()}const on=!S.kp;if(on&&S.code.length===6)S.code='';setKp(on);break}
   case 'key':{const v=el.dataset.v;if(v==='Gotowe'){setKp(false);break}if(v==='del')S.code=S.code.slice(0,-1);else if(S.code.length<6)S.code+=String(v);
     renderCode();if(S.code.length===6)later(()=>setKp(false),280);break}
-  case 'pay':{if(!payReady()){codeError();break}const b=$('#payBtn');if(b.classList.contains('loading'))break;b.classList.add('loading');$('#payLbl').textContent='Łączę z bankiem…';
+  case 'pay':{if(!payReady()){codeError();if(!S.kp)setKp(true);break}
+    const em=$('#email');if(em.value.trim()&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim())){em.classList.add('bad');em.focus();toast('Sprawdź adres e-mail albo zostaw pole puste','ri-mail-line');break}
+    em.classList.remove('bad');const b=$('#payBtn');if(b.classList.contains('loading'))break;b.classList.add('loading');$('#payLbl').textContent='Łączę z bankiem…';
     later(()=>{b.classList.remove('loading');go('proc')},800);break}
+  case 'cancelpay':fail('cancel');break;
+  case 'retry':S.code='';S.retry=true;go('pay');break;
+  case 'altpay':S.code='';S.method=S.method==='wallet'?'blik':'wallet';go('pay');break;
   }
 });
 document.addEventListener('click',e=>{const tk=e.target.closest('.tk');if(tk&&!e.target.closest('button')){const k=tk.dataset.k;if(!S.cart[k]){S.cart[k]=1;renderTickets();bump(k)}}});
+$('#email').addEventListener('input',e=>e.target.classList.remove('bad'));
 
-STEPS.forEach(([v,l],i)=>{const li=document.createElement('li');li.innerHTML=`<button data-to="${v}" class="${i?'':'on'}"><span class="n">0${i+1}</span>${l}</button>`;$('#steps').appendChild(li)});
-function jump(v){if(!['scan','greet'].includes(v)&&!count())S.cart={n:2,u:1,f:0};
-  if(['proc','done'].includes(v)&&S.method==='blik'&&S.code.length<6)S.code='739204';clearT();go(v)}
+STEPS.forEach(([v,l,n],i)=>{const li=document.createElement('li');li.innerHTML=`<button data-to="${v}" class="${i?'':'on'}"><span class="n">${n}</span>${l}</button>`;$('#steps').appendChild(li)});
+function jump(v){clearT();if(v.startsWith('sim-'))return demo(v.slice(4));
+  if(!['scan','greet'].includes(v)&&!count())S.cart={n:2,u:1,f:0};
+  if(['proc','done'].includes(v)&&S.method==='blik'&&S.code.length<6)S.code=DEMO;go(v)}
 $('#steps').addEventListener('click',e=>{const b=e.target.closest('button');if(b)jump(b.dataset.to)});
-addEventListener('load',()=>{fit();const h=location.hash.slice(1);if(h&&STEPS.some(s=>s[0]===h))jump(h)});
+addEventListener('load',()=>{fit();const h=location.hash.slice(1);if(h&&(STEPS.some(s=>s[0]===h)||h.startsWith('sim-')))jump(h)});
 </script>
 </body>
 </html>
